@@ -4,7 +4,7 @@
 <head>
 	
 
-	<title>Leaflet demo</title>
+	<title>TEHGAM.COM - Players Map</title>
 
 	<meta charset="utf-8" />	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -47,7 +47,10 @@
 		var northEast = map.unproject([14250, 0], map.getMaxZoom());
 		map.setMaxBounds(new L.LatLngBounds(southWest, northEast));
 
-        L.tileLayer('./tiles/{z}/tile_{x}_{y}.png').addTo(map);
+        L.tileLayer('./tiles/{z}/tile_{x}_{y}.png' , {
+    	attribution: 'Players Map &copy; <a href="http://tehgam.com/">TEHGAM.COM</a>',
+    	maxZoom: 18
+		}).addTo(map);
 
 
 	</script>
